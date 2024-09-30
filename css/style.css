@@ -1,0 +1,164 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: '../fonts/CeraPro-Light.ttf', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Загальний контейнер */
+.container {
+    max-width: 1200px; /* Встановлюємо максимальну ширину контейнера */
+    margin: 0 auto;    /* Вирівнюємо контейнер по центру */
+    padding: 0 10px;   /* Встановлюємо відступи з боків */
+}
+
+/* Опціональні стилі для хедера та інших блоків */
+header, nav, main, footer {
+    padding: 5px 0; /* Відступи зверху і знизу для кожного блоку */
+}
+
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* це потрібно для того, щоб псевдоелемент розміщувався відносно хедера */
+    border-bottom: 1px solid #4CAF50; /* основна лінія */
+}
+
+header .logo img {
+    width: 120px; /* Adjusted for a slightly smaller size */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px; /* Increased gap for better spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600; /* Make links bolder */
+    padding-bottom: calc(3.8vh);
+    border-bottom: 3px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    border-bottom: 3px solid #4CAF50; /* Green underline on hover/active */
+}
+
+.login .login-btn {
+    background-color: white;
+    color: #4CAF50;
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.login .login-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 80px;
+    margin: 0; /* Remove margin for better alignment */
+    margin-top: 20px;
+    background-color: #F9F9F9;
+    height: calc(100vh - 100px); /* Adjust height based on the header */
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 2em; /* Slightly smaller */
+    font-weight: bold;
+    color: #777; /* Grey tone */
+}
+
+.hero-text h2 {
+    font-size: 4.5em; /* Increase size to match the design */
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.hero-text h2 span {
+    color: #4CAF50;
+}
+
+.hero-text p {
+    font-size: 1.1em;
+    margin: 20px 0;
+}
+
+.shop-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.shop-btn:hover {
+    background-color: #45a049;
+}
+
+.plant-container {
+    position: absolute; /* Position relative to the .hero section */
+    right: 50px; /* Align to the right side of the screen with a margin of 50px */
+    bottom: 0; /* Align the bottom of the plant to the bottom of the .hero section */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.plant-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.plant-container img:last-child {
+    width: 518px;
+    margin-right: 50px;
+    margin-bottom: 40px;
+}
+
+
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+}
