@@ -1,4 +1,3 @@
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -11,20 +10,19 @@ body {
     line-height: 1.6;
 }
 
-/* Загальний контейнер */
 .container {
-    max-width: 1200px; /* Встановлюємо максимальну ширину контейнера */
-    margin: 0 auto;    /* Вирівнюємо контейнер по центру */
-    padding: 0 10px;   /* Встановлюємо відступи з боків */
+    max-width: 1200px; 
+    margin: 0 auto;    
+    padding: 0 10px;  
 }
 
-/* Опціональні стилі для хедера та інших блоків */
+
 header, nav, main, footer {
-    padding: 5px 0; /* Відступи зверху і знизу для кожного блоку */
+    padding: 5px 0; 
 }
 
 
-/* Header styles */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -32,32 +30,34 @@ header {
     padding: 20px 80px;
     background-color: white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; /* це потрібно для того, щоб псевдоелемент розміщувався відносно хедера */
-    border-bottom: 1px solid #4CAF50; /* основна лінія */
+    position: relative; 
+    border-bottom: 1px solid #4CAF50; 
 }
 
 header .logo img {
-    width: 120px; /* Adjusted for a slightly smaller size */
+    width: 120px; 
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    gap: 40px; /* Increased gap for better spacing */
+    gap: 40px; 
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-size: 16px;
-    font-weight: 600; /* Make links bolder */
+    font-weight: 600; 
     padding-bottom: calc(3.8vh);
     border-bottom: 3px solid transparent;
 }
 
+
+
 nav ul li a:hover,
 nav ul li a:focus {
-    border-bottom: 3px solid #4CAF50; /* Green underline on hover/active */
+    border-bottom: 3px solid #4CAF50; 
 }
 
 .login .login-btn {
@@ -71,35 +71,64 @@ nav ul li a:focus {
 
 }
 
-.login .login-btn:hover {
+
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.login-btn:hover {
     background-color: #4CAF50;
     color: white;
 }
 
-/* Hero section */
+.login-btn i {
+    margin-right: 8px; 
+    transition: color 0.3s ease;
+}
+
+.login-btn::before {
+    color: #4CAF50;
+    margin-right: 8px;
+    transition: color 0.3s ease;
+}
+
+.login-btn:hover::before {
+    color: white;
+}
+
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 100px 80px;
-    margin: 0; /* Remove margin for better alignment */
+    margin: 0; 
     margin-top: 20px;
     background-color: #F9F9F9;
-    height: calc(100vh - 100px); /* Adjust height based on the header */
-}
+    height: calc(100vh - 100px); 
 
 .hero-text {
     max-width: 600px;
 }
 
 .hero-text h1 {
-    font-size: 2em; /* Slightly smaller */
+    font-size: 2em; 
     font-weight: bold;
-    color: #777; /* Grey tone */
+    color: #777;
 }
 
 .hero-text h2 {
-    font-size: 4.5em; /* Increase size to match the design */
+    font-size: 4.5em; 
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -129,9 +158,9 @@ nav ul li a:focus {
 }
 
 .plant-container {
-    position: absolute; /* Position relative to the .hero section */
-    right: 50px; /* Align to the right side of the screen with a margin of 50px */
-    bottom: 0; /* Align the bottom of the plant to the bottom of the .hero section */
+    position: absolute; 
+    right: 50px;
+    bottom: 0; 
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -150,7 +179,7 @@ nav ul li a:focus {
 
 
 
-/* Adjust for smaller screens */
+
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -161,4 +190,55 @@ nav ul li a:focus {
     .hero-image img {
         width: 100%;
     }
+}
+
+
+
+.registration-section {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.registration-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.register-btn:hover {
+    background-color: #45a049;
 }
